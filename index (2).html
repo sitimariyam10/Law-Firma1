@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangga Wibowo — Software Developer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- progress rule at very top of viewport -->
+  <div class="scroll-rule"><div class="scroll-rule__fill" id="scrollFill"></div></div>
+
+  <header class="topbar">
+    <a href="#top" class="topbar__mark">RW<span class="topbar__dot">.</span></a>
+    <nav class="topbar__nav" id="topNav">
+      <a href="#work">01 · Karya</a>
+      <a href="#log">02 · Riwayat</a>
+      <a href="#about">03 · Tentang</a>
+      <a href="#contact">04 · Kontak</a>
+    </nav>
+    <button class="topbar__toggle" id="navToggle" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__terminal">
+        <div class="terminal">
+          <div class="terminal__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="terminal__title">whoami.sh</span>
+          </div>
+          <div class="terminal__body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="terminal__out" id="typedOut"></p>
+            <p class="terminal__cursor" id="cursor">$ <span class="blink">▌</span></p>
+          </div>
+        </div>
+        <div class="hero__tags">
+          <span>JavaScript</span><span>TypeScript</span><span>React</span><span>Node.js</span><span>PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="hero__text">
+        <p class="eyebrow">Software Developer · Jakarta, ID</p>
+        <h1 class="hero__title">
+          Menulis kode<br>
+          yang <em>diff</em>-nya<br>
+          selalu hijau.
+        </h1>
+        <p class="hero__desc">
+          Saya membangun aplikasi web dari ujung ke ujung — dari rancangan basis data
+          sampai antarmuka yang terasa cepat dan jujur untuk dipakai. Lima tahun mengirim
+          kode ke produksi, dan masih senang membaca stack trace jam 2 pagi.
+        </p>
+        <div class="hero__cta">
+          <a href="#work" class="btn btn--primary">Lihat karya <span aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn btn--ghost">Hubungi saya</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS / DIFF STRIP -->
+    <section class="diffstrip" aria-label="Ringkasan angka">
+      <div class="diffline diffline--add">
+        <span class="diffline__sym">+</span>
+        <span class="diffline__num">42</span>
+        <span class="diffline__label">proyek dikirim ke produksi</span>
+      </div>
+      <div class="diffline diffline--add">
+        <span class="diffline__sym">+</span>
+        <span class="diffline__num">5</span>
+        <span class="diffline__label">tahun pengalaman profesional</span>
+      </div>
+      <div class="diffline diffline--del">
+        <span class="diffline__sym">−</span>
+        <span class="diffline__num">0</span>
+        <span class="diffline__label">deadline yang terlewat (2024–2025)</span>
+      </div>
+      <div class="diffline diffline--add">
+        <span class="diffline__sym">+</span>
+        <span class="diffline__num">12</span>
+        <span class="diffline__label">tim yang pernah diajak kerja bareng</span>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section" id="work">
+      <div class="section__head">
+        <p class="eyebrow">01 · Karya Terpilih</p>
+        <h2 class="section__title">Proyek yang paling saya banggakan</h2>
+      </div>
+
+      <div class="projects">
+
+        <article class="project">
+          <div class="project__media" style="--tint:#2F7A55">
+            <span class="project__tag">web app</span>
+          </div>
+          <div class="project__body">
+            <h3>Ledgerly — Pembukuan untuk UMKM</h3>
+            <p>Aplikasi pembukuan ringan untuk pelaku UMKM: pencatatan transaksi, laporan
+              laba-rugi otomatis, dan sinkronisasi offline-first. Dipakai lebih dari 3.000
+              pelaku usaha aktif per bulan.</p>
+            <ul class="project__stack">
+              <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>PWA</li>
+            </ul>
+            <a href="#" class="project__link">Studi kasus <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media" style="--tint:#2B4C7E">
+            <span class="project__tag">platform</span>
+          </div>
+          <div class="project__body">
+            <h3>Rute — Optimasi Pengiriman Logistik</h3>
+            <p>Mesin perutean untuk armada pengiriman skala menengah, memangkas rata-rata
+              waktu tempuh 18% dengan algoritma penjadwalan berbasis constraint solver.</p>
+            <ul class="project__stack">
+              <li>TypeScript</li><li>Python</li><li>Redis</li><li>Docker</li>
+            </ul>
+            <a href="#" class="project__link">Studi kasus <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__media" style="--tint:#B9503A">
+            <span class="project__tag">design system</span>
+          </div>
+          <div class="project__body">
+            <h3>Kanvas — Design System Internal</h3>
+            <p>Pustaka komponen dan token desain lintas 6 tim produk, menyusutkan waktu
+              pengerjaan fitur baru rata-rata 30% dan menyeragamkan pengalaman lintas produk.</p>
+            <ul class="project__stack">
+              <li>React</li><li>Storybook</li><li>Figma Tokens</li>
+            </ul>
+            <a href="#" class="project__link">Studi kasus <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- COMMIT LOG / EXPERIENCE -->
+    <section class="section section--dim" id="log">
+      <div class="section__head">
+        <p class="eyebrow">02 · Riwayat Kerja</p>
+        <h2 class="section__title">Log perjalanan karier</h2>
+      </div>
+
+      <div class="gitlog">
+
+        <div class="gitlog__entry">
+          <div class="gitlog__rail"><span class="gitlog__node"></span></div>
+          <div class="gitlog__card">
+            <p class="gitlog__hash">a91f3c2 <span class="gitlog__date">2023 — Sekarang</span></p>
+            <h3>Senior Software Engineer, Nirmala Tech</h3>
+            <p>Memimpin tim 4 orang membangun platform pembayaran internal; menurunkan
+              waktu respons API rata-rata dari 480ms menjadi 90ms lewat perbaikan arsitektur
+              caching.</p>
+          </div>
+        </div>
+
+        <div class="gitlog__entry">
+          <div class="gitlog__rail"><span class="gitlog__node"></span></div>
+          <div class="gitlog__card">
+            <p class="gitlog__hash">7c02e18 <span class="gitlog__date">2021 — 2023</span></p>
+            <h3>Full-Stack Developer, Studio Delapan</h3>
+            <p>Membangun dan memelihara lima produk web klien, dari e-commerce butik
+              sampai dashboard internal untuk perusahaan logistik.</p>
+          </div>
+        </div>
+
+        <div class="gitlog__entry">
+          <div class="gitlog__rail"><span class="gitlog__node"></span></div>
+          <div class="gitlog__card">
+            <p class="gitlog__hash">4b8d0a5 <span class="gitlog__date">2019 — 2021</span></p>
+            <h3>Junior Developer, Rintis Digital</h3>
+            <p>Memulai karier di tim front-end, belajar menulis kode yang tidak cuma
+              jalan tapi juga bisa dibaca orang lain enam bulan kemudian.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="about__grid">
+        <div class="about__portrait" aria-hidden="true">
+          <div class="about__frame">RW</div>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow">03 · Tentang Saya</p>
+          <h2 class="section__title">Lebih suka menyelesaikan masalah daripada menulis kode yang rapi sendirian</h2>
+          <p>Saya percaya kode terbaik adalah kode yang bisa dipahami tim lain tanpa perlu
+            bertanya ke penulisnya. Di luar layar, saya menghabiskan waktu menyeduh kopi
+            manual brew dan membaca dokumentasi open-source untuk hiburan — ya, benar-benar
+            untuk hiburan.</p>
+          <div class="about__skills">
+            <div>
+              <h4>Bahasa &amp; Framework</h4>
+              <p>JavaScript, TypeScript, React, Next.js, Node.js, Python</p>
+            </div>
+            <div>
+              <h4>Infrastruktur</h4>
+              <p>PostgreSQL, Redis, Docker, AWS, CI/CD</p>
+            </div>
+            <div>
+              <h4>Cara Kerja</h4>
+              <p>Code review ketat, dokumentasi jelas, testing bukan basa-basi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="contact__inner">
+        <p class="eyebrow">04 · Kontak</p>
+        <h2 class="section__title">Punya proyek yang perlu dikerjakan?</h2>
+        <p class="contact__desc">Baris paling penting biasanya cuma satu baris pesan.
+          Ceritakan yang Anda butuhkan, saya balas dalam 1–2 hari kerja.</p>
+
+        <form class="contact__form" id="contactForm">
+          <div class="field">
+            <label for="name">Nama</label>
+            <input id="name" name="name" type="text" placeholder="Nama lengkap Anda" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@contoh.com" required>
+          </div>
+          <div class="field">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ceritakan singkat tentang proyek Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Kirim pesan <span aria-hidden="true">→</span></button>
+          <p class="contact__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact__links">
+          <a href="mailto:rangga.wibowo@example.com">rangga.wibowo@example.com</a>
+          <a href="#">github.com/ranggawibowo</a>
+          <a href="#">linkedin.com/in/ranggawibowo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Rangga Wibowo. Dibangun manual, baris demi baris.</p>
+    <a href="#top" class="footer__top">Kembali ke atas ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
